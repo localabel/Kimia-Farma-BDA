@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `big-data-analyst-490602.Kimia_Farma.kf_analisa` AS
+CREATE OR REPLACE TABLE `rakaminkfanalytics-491101.Kimia_Farma.kf_analisa` AS
 SELECT
     ft.transaction_id,
     ft.date,
@@ -34,8 +34,8 @@ SELECT
 
     ft.rating AS rating_transaksi
 
-FROM `big-data-analyst-490602.Kimia_Farma.kf_final_transaction` ft
-LEFT JOIN `big-data-analyst-490602.Kimia_Farma.kf_kantor_cabang` kc
+FROM `rakaminkfanalytics-491101.Kimia_Farma.kf_final_transaction` ft
+LEFT JOIN `rakaminkfanalytics-491101.Kimia_Farma.kf_kantor_cabang` kc
     ON ft.branch_id = kc.branch_id
-LEFT JOIN `big-data-analyst-490602.Kimia_Farma.kf_product` p
-    ON ft.product_id = p.product_id;
+LEFT JOIN `rakaminkfanalytics-491101.Kimia_Farma.kf_product` p
+    ON ft.product_id = p.product_id
