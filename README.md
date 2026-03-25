@@ -19,3 +19,12 @@ Proyek ini merupakan hasil dari **Virtual Internship** di **Kimia Farma**. Fokus
 * `kf_analisa.sql`: Kode SQL untuk pemrosesan data di BigQuery.
 * `dashboard.jpg`: Screenshot hasil visualisasi data.
 * `README.md`: Dokumentasi proyek.
+### 🛠️ Data Transformation & SQL Logic
+Berikut adalah proses transformasi data menggunakan SQL di Google BigQuery:
+
+![SQL Query kf_analisa](kf_analisa.png)
+
+### 📋 Final Table Preview
+Tampilan tabel hasil olahan (`kf_final_transaction`) yang siap dihubungkan ke Looker Studio:
+
+![Final Table Preview](kf_final_transaction.png)
