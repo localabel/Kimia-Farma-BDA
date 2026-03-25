@@ -33,10 +33,12 @@ Tampilan tabel hasil olahan (`kf_final_transaction`) yang siap dihubungkan ke Lo
 ![Final Table Preview](kf_final_transaction.png)
 Hasil akhir transformasi data (Datamart) yang telah mengintegrasikan data transaksi, profil cabang, dan katalog produk. Tabel ini sudah divalidasi dan dibersihkan sehingga siap digunakan sebagai sumber data tunggal (Single Source of Truth) untuk pembuatan dashboard visual di Looker Studio.
 ### 📋 Final Analysis Table (Datamart)
+**Key Feature:** Tabel ini merangkum data dari 4 tabel berbeda melalui proses `LEFT JOIN`, memungkinkan analisis mendalam per wilayah, per produk, hingga per rating cabang.
 
-> **Key Feature:** Tabel ini merangkum data dari 4 tabel berbeda melalui proses `LEFT JOIN`, memungkinkan analisis mendalam per wilayah, per produk, hingga per rating cabang.
-Data Transformation & Business Logic Automation"
-> **Kode SQL**
+**Data Transformation & Business Logic Automation:**
+Alur transformasi ini dirancang untuk menetapkan margin laba secara dinamis berdasarkan kategori harga produk, sekaligus melakukan kalkulasi pendapatan bersih (Nett Sales) secara instan terhadap ratusan ribu baris data transaksi.
+
+```sql
 CREATE OR REPLACE TABLE `rakaminkfanalytics-491101.Kimia_Farma.kf_analisa` AS
 SELECT
     ft.transaction_id,
