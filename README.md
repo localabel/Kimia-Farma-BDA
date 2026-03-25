@@ -79,6 +79,9 @@ LEFT JOIN `rakaminkfanalytics-491101.Kimia_Farma.kf_kantor_cabang` kc
     ON ft.branch_id = kc.branch_id
 LEFT JOIN `rakaminkfanalytics-491101.Kimia_Farma.kf_product` p
     ON ft.product_id = p.product_id
+...
 ORDER BY 2, 1;
-> ### 💡 Business Logic & Impact
-> **Script SQL ini digunakan untuk membangun tabel analisa utama secara otomatis.** Dengan menggabungkan data transaksi, profil cabang, dan katalog produk, query ini secara dinamis menghitung metrik finansial penting seperti **Nett Sales** dan **Nett Profit** berdasarkan aturan margin laba yang telah ditentukan. Hal ini memungkinkan perusahaan mendapatkan *insight* keuntungan secara *real-time* tanpa pengolahan manual.
+```
+
+### 💡 Business Logic & Impact
+**Script SQL ini digunakan untuk membangun tabel analisa utama secara otomatis.** Dengan menggabungkan data transaksi, profil cabang, dan katalog produk, query ini secara dinamis menghitung metrik finansial penting seperti **Nett Sales** dan **Nett Profit** berdasarkan aturan margin laba yang telah ditentukan. Hal ini memungkinkan perusahaan mendapatkan *insight* keuntungan secara *real-time* tanpa pengolahan manual.
