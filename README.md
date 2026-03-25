@@ -36,6 +36,7 @@ Hasil akhir transformasi data (Datamart) yang telah mengintegrasikan data transa
 
 > **Key Feature:** Tabel ini merangkum data dari 4 tabel berbeda melalui proses `LEFT JOIN`, memungkinkan analisis mendalam per wilayah, per produk, hingga per rating cabang.
 Data Transformation & Business Logic Automation"
+
 CREATE OR REPLACE TABLE `rakaminkfanalytics-491101.Kimia_Farma.kf_analisa` AS
 SELECT
     ft.transaction_id,
