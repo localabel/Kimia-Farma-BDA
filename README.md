@@ -23,9 +23,8 @@ Proyek ini merupakan hasil dari **Virtual Internship** di **Kimia Farma**. Fokus
 Berikut adalah proses transformasi data menggunakan SQL di Google BigQuery:
 
 ![SQL Query kf_analisa](kf_analisa.png)
-Proses otomasi perhitungan profitabilitas menggunakan SQL. Kode ini dirancang untuk menentukan margin laba secara dinamis berdasarkan kategori harga produk, sekaligus menghitung pendapatan bersih (Nett Sales) secara real-time dari jutaan baris data transaksi.
+Gambar di atas menampilkan proses otomasi perhitungan profitabilitas menggunakan SQL di Google BigQuery. Alur ini dirancang untuk menetapkan margin laba secara dinamis berdasarkan kategori harga produk, sekaligus melakukan kalkulasi pendapatan bersih (Nett Sales) secara instan terhadap ratusan ribu baris data transaksi.
 ### 🛠️ SQL Logic: Automated Profitability Calculation
-![SQL Query](kf_analisa.png)
 > **Insight:** Menggunakan logika `CASE WHEN` untuk menetapkan margin laba (10% - 30%) secara otomatis, memastikan perhitungan profit akurat sesuai dengan tier harga produk Kimia Farma.
 
 ### 📋 Final Table Preview
@@ -34,7 +33,7 @@ Tampilan tabel hasil olahan (`kf_final_transaction`) yang siap dihubungkan ke Lo
 ![Final Table Preview](kf_final_transaction.png)
 Hasil akhir transformasi data (Datamart) yang telah mengintegrasikan data transaksi, profil cabang, dan katalog produk. Tabel ini sudah divalidasi dan dibersihkan sehingga siap digunakan sebagai sumber data tunggal (Single Source of Truth) untuk pembuatan dashboard visual di Looker Studio.
 ### 📋 Final Analysis Table (Datamart)
-![Final Table](kf_final_transaction.png)
+
 > **Key Feature:** Tabel ini merangkum data dari 4 tabel berbeda melalui proses `LEFT JOIN`, memungkinkan analisis mendalam per wilayah, per produk, hingga per rating cabang.
 Data Transformation & Business Logic Automation"
 CREATE OR REPLACE TABLE `rakaminkfanalytics-491101.Kimia_Farma.kf_analisa` AS
